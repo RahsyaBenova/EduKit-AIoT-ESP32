@@ -1,0 +1,11 @@
+streamlit
+requests
+opencv-python
+numpy
+inference-sdk
+gTTS
+pygame
+google-generativeai
+pymongo
+bcrypt
+opencv-python-headless
