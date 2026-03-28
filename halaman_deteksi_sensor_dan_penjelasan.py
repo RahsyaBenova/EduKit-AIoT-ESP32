@@ -10,7 +10,7 @@ import os
 import uuid
 
 # Inisialisasi pygame untuk pemutaran suara diaktifkan hanya ketika untuk local 
-# pygame.mixer.init()
+pygame.mixer.init()
 
 def halaman_deteksi_sensor_dan_penjelasan():
     # st.set_page_config(page_title="Deteksi Sensor ESP32 + Gemini", layout="centered")
@@ -86,10 +86,10 @@ def halaman_deteksi_sensor_dan_penjelasan():
                 tts.save(audio_file)
 
                 # Hapus Komentar untuk Memutar audio dengan pygame ketika local run webnya
-                # pygame.mixer.music.load(audio_file)
-                # pygame.mixer.music.play()
-                # while pygame.mixer.music.get_busy():
-                #     pygame.time.Clock().tick(10)
+                pygame.mixer.music.load(audio_file)
+                pygame.mixer.music.play()
+                while pygame.mixer.music.get_busy():
+                    pygame.time.Clock().tick(10)
 
                 os.remove(audio_file)
             else:
