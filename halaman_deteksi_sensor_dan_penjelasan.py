@@ -64,7 +64,7 @@ def halaman_deteksi_sensor_dan_penjelasan():
         # Penjelasan menggunakan Gemini
         st.subheader("📚 Penjelasan Sensor yang Terdeteksi")
         headers = {"Content-Type": "application/json"}
-        gemini_url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={api_key}"
+        gemini_url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={api_key}"
 
         for pred in predictions:
             class_name = pred.get('class', 'Unknown')
